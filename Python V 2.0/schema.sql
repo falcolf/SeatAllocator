@@ -1,1 +1,4 @@
-CREATE TABLE "students" ( `regno` TEXT, `ccode` TEXT, `batch` TEXT, `sem` TEXT, `facid` TEXT )
+CREATE TABLE `students` ( `regno` , `CourseCode` , `CourseTitle` , `slot` , `facid` , `sem` , 'ccode' text)
+
+alter table students add column 'ccode' text
+update students set ccode = CourseCode || "-" ||CourseTitle
